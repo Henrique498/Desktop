@@ -4,6 +4,7 @@ import os
 import ctypes
 import torch
 import pygame
+from dotenv import load_dotenv
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QHBoxLayout,
     QLineEdit, QPushButton, QListWidget, QTextEdit, QLabel, QMessageBox
@@ -16,6 +17,8 @@ from diffusers.utils import export_to_video
 from moviepy import ImageClip
 from PyQt5.QtGui import QPixmap, QIcon
 
+load_dotenv()
+
 try:
     
     myappid = 'meu.projeto.livros.ia.v1' 
@@ -23,7 +26,7 @@ try:
 except Exception as e:
     print(f"Erro ao configurar ID do app: {e}")
 
-API_KEY = "AIzaSyAkPO4pP59_pKv0tMcJYWvHt2c020H3yCY"
+API_KEY = os.getenv("GOOGLE_BOOKS_API_KEY")
 
 
 class VideoAIWorker(QThread):

@@ -1,3 +1,12 @@
+# --- Arquivos de Configuração Sensíveis ---
+.env
+
+# --- Arquivos Temporários Gerados pelo App ---
+temp_audio.mp3
+temp_ia.png
+video_livro_ia.mp4
+
+# --- Arquivos que você já tinha listado ---
 /cep.py
 /icon.jpg
 /interface.py
@@ -6,6 +15,12 @@
 /node_modules
 /ricardo.py
 /tela.py
-/temp_audio.mp3
-/temp_ia.png
-/video_livro_ia.mp4
+
+# --- Cache do Python (Evita arquivos inúteis no Git) ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Ambientes Virtuais ---
+venv/
+.venv/
