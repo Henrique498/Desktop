@@ -1,0 +1,65 @@
+/* Configuração da Janela Principal */
+/* O ponto (.) antes do nome é essencial para o Qt aplicar o fundo corretamente */
+.GoogleBooksApp {
+    background-color: #0891b2; /* Ciano Profissional */
+    border: 1px solid #06748f; 
+    border-radius: 10px;
+}
+
+/* Configuração Global de Widgets internos para não herdarem o fundo da janela */
+QWidget {
+    background-color: transparent;
+}
+
+/* Campos de Entrada, Listas e Áreas de Texto */
+/* Definimos background branco aqui para contraste com o fundo cinza da janela */
+QLineEdit, QListWidget, QTextEdit {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    color: #2c3e50;
+}
+
+QLineEdit:focus {
+    border: 2px solid #219ebc;
+}
+
+/* Configuração Base de todos os Botões */
+QPushButton {
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+/* Botões Específicos por ObjectName */
+QPushButton#btnBuscar { background-color: #219ebc; border: 3px solid #023e8a; }
+QPushButton#btnBuscar:hover { background-color: #1976D2; }
+
+QPushButton#btnLimpar { background-color: #669bbc; border: 3px solid #457b9d; }
+QPushButton#btnLimpar:hover { background-color: #616161; }
+
+QPushButton#btnAudio { background-color: #0077b6; border: 3px solid #001233; }
+QPushButton#btnAudio:hover { background-color: #F57C00; }
+
+QPushButton#btnParar { background-color: #c1121f; border: 3px solid #780000; }
+QPushButton#btnParar:hover { background-color: #d32f2f; }
+
+QPushButton#btnVideo { background-color: #023e8a; border: 3px solid #03045e; }
+QPushButton#btnVideo:hover { background-color: #980398; border-color: #fb29f5; }
+
+/* Configuração Geral de Labels (Textos) */
+QLabel {
+    color: #ffffff; 
+    font-size: 14px; 
+    font-weight: bold;
+}
+
+
+/* Estilo Específico do Versículo no Rodapé */
+QLabel#lblVersiculo {
+    color: #cffafe;
+    font-style: italic;
+}
+
